@@ -26,10 +26,16 @@ port_payload = {
 'q' : '(Slot: 4 Port: 48)',
 'partial' : True
 }
+
+vlan_payload = {
+'q' : '64',
+}
 # search_device OK
 # r=api.search_device(device_payload)
-# search_node
+# search_node OK
 # r=api.search_node(node_payload)
-r=api.search_port(port_payload)
+# search port OK
+# r=api.search_port(port_payload)
+r=api.search_vlan(vlan_payload)
 print(r)
 api.logout()

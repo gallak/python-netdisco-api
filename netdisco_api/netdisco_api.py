@@ -197,3 +197,16 @@ class NetdiscoAPI:
     def search_port(self, payload):
         r=self._get(self._root_uri+"search/port", payload=payload)
         return r
+
+    """"
+    Search vlan ( by Vlan), following arguments could be used :
+
+    Args :
+        q (mandatory) (string) : VLAN  number or nam
+    Returns:
+        result: Array value found
+    """
+    def search_vlan(self, payload):
+        r=self._get(self._root_uri+"search/vlan", payload=payload)
+        return r
+
