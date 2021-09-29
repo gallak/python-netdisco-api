@@ -103,7 +103,7 @@ class NetdiscoAPI:
         headers.update(headers_dialog)
         # Post
         r = self._session.get(self._url + uri, verify=self._verify_cert, headers=headers, params=payload)
-
+        #print(r.url)
         return r.text
 
     def _post(self, data, uri="", custom_headers=None):
@@ -210,3 +210,28 @@ class NetdiscoAPI:
         r=self._get(self._root_uri+"search/vlan", payload=payload)
         return r
 
+###############  OBJECT SEARCHING
+
+    """"
+    object_device get info by ip :
+
+    Args :
+        ip (mandatory) (string) : ip
+    Returns:
+        result: Array value found
+    """
+    def object_device(self, payload, ip=None):
+        r=self._get(self._root_uri+"object/device/" + ip, payload=payload)
+        return r
+
+    """"
+    object_device get info device_ips by ip :
+
+    Args :
+        ip (mandatory) (string) : ip
+    Returns:
+        result: Array value found
+    """
+    def object_device_ips(self, payload, ip=None):
+        r=self._get(self._root_uri+"object/device/" + ip + "/device_ips", payload=payload)
+        return r
