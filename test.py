@@ -21,8 +21,15 @@ node_payload = {
 'partial' : True,
 'vendor' : 'Vmware'
 }
+
+port_payload = {
+'q' : '(Slot: 4 Port: 48)',
+'partial' : True
+}
 # search_device OK
 # r=api.search_device(device_payload)
-r=api.search_node(node_payload)
+# search_node
+# r=api.search_node(node_payload)
+r=api.search_port(port_payload)
 print(r)
 api.logout()

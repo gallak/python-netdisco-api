@@ -182,3 +182,18 @@ class NetdiscoAPI:
     def search_device(self, payload):
         r=self._get(self._root_uri+"search/device", payload=payload)
         return r
+
+    """"
+    Search port ( by MAc addres or Vlan), following arguments could be used :
+
+    Args :
+        q (mandatory) (string) : Port name or VLAN or MAC address
+        partial (boolean) : Search for a partial match on parameter “q” Default value : true
+        uplink (boolean) : Include uplinks in results Default value : false
+        ethernet (boolean) : Only Ethernet type interfaces in results : true
+    Returns:
+        result: Array value found
+    """
+    def search_port(self, payload):
+        r=self._get(self._root_uri+"search/port", payload=payload)
+        return r
