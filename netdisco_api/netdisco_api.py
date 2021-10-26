@@ -155,7 +155,7 @@ class NetdiscoAPI:
         os_ver (string): Exact match of the Device operating system version
         vendor (string): Exact match of the Device vendor
         layers (string): OSI Layer which the device must support
-        matchall (bool) : If true, all fields (except “q”) must match the Device
+        matchall (bool) : If true, all fields (except "q") must match the Device
 
     Returns:
         result: Array value found
@@ -168,12 +168,12 @@ class NetdiscoAPI:
     Search node ( like computer / server all not a network management), following arguments could be used :
 
     Args :
-        q (mandatory) (string) : MAC Address or IP Address or Hostname (without Domain Suffix) of a Node (supports SQL or “*” wildcards)
-        partial (boolean) : Partially match the “q” parameter (wildcard characters not required) Default value : false
+        q (mandatory) (string) : MAC Address or IP Address or Hostname (without Domain Suffix) of a Node (supports SQL or "*" wildcards)
+        partial (boolean) : Partially match the "q" parameter (wildcard characters not required) Default value : false
         deviceports (boolean) : MAC Address search will include Device Port MACs (Default value : true)
         show_vendor (boolean) : Include interface Vendor in results (Default value : false)
         archived (boolean) : Include archived records in results (Default value : false)
-        daterange (string) : Date Range in format “YYYY-MM-DD to YYYY-MM-DD” (Default value : 1970-01-01 to current date)
+        daterange (string) : Date Range in format "YYYY-MM-DD to YYYY-MM-DD" (Default value : 1970-01-01 to current date)
         age_invert (boolean) : Results should NOT be within daterange (Default value : false)
 
     Returns:
@@ -188,7 +188,7 @@ class NetdiscoAPI:
 
     Args :
         q (mandatory) (string) : Port name or VLAN or MAC address
-        partial (boolean) : Search for a partial match on parameter “q” Default value : true
+        partial (boolean) : Search for a partial match on parameter "q" Default value : true
         uplink (boolean) : Include uplinks in results Default value : false
         ethernet (boolean) : Only Ethernet type interfaces in results : true
     Returns:
